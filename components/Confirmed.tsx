@@ -19,11 +19,11 @@ const confettiConfig = {
 
 export default function Confirmed() {
     const [percentage, setPercentage] = useState(0)
-    const [done, setText] = useState(false)
+    const [done, setDone] = useState('✅')
 
     useEffect(() => {
         const t1 = setTimeout(() => setPercentage(100), 100)
-        const t2 = setTimeout(() => setText('✅'), 600)
+        const t2 = setTimeout(() => setDone('✅'), 600)
 
         return () => {
             clearTimeout(t1)
